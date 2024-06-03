@@ -1,17 +1,15 @@
 package com.example;
 
 
-import jakarta.enterprise.context.Dependent;
-import jakarta.inject.Inject;
-import jakarta.persistence.EntityManager;
+import jakarta.enterprise.context.ApplicationScoped;
 
-@Dependent
+import java.time.Instant;
+
+@ApplicationScoped
 public class ExampleService {
 
-    @Inject
-    EntityManager em;
-
-    public void persistEntity(String name) {
-        em.persist(new ExampleEntity(name));
+    public Instant now() {
+        return Instant.now();
     }
+
 }
