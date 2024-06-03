@@ -20,7 +20,7 @@ public class ExtensionProcessor {
     @BuildStep
     List<AdditionalJpaModelBuildItem> produceModel() {
         return Arrays.asList(
-                new AdditionalJpaModelBuildItem(ExampleEntity.class)
+                new AdditionalJpaModelBuildItem(ExampleEntity.class.getName())
         );
     }
 
