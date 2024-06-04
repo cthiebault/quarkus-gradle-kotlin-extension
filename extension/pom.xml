@@ -5,14 +5,12 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.example</groupId>
-    <artifactId>extension-example-parent</artifactId>
-    <version>999-SNAPSHOT</version>
+    <artifactId>gradle-kotlin-extension</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
-
   <artifactId>extension-parent</artifactId>
   <name>Extension - Parent</name>
-
   <packaging>pom</packaging>
   <modules>
     <module>runtime</module>

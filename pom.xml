@@ -5,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
-  <artifactId>extension-example-parent</artifactId>
-  <version>999-SNAPSHOT</version>
-  <name>Extension - Example - Parent</name>
+  <artifactId>gradle-kotlin-extension</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>Quarkus Extension using Gradle and Kotlin</name>
   <packaging>pom</packaging>
 
   <modules>
