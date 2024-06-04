@@ -1,11 +1,11 @@
 plugins {
+  kotlin("jvm")
   `maven-publish`
-  `java-library`
 }
 
 allprojects {
 
-  apply(plugin = "java-library")
+  apply(plugin = "org.jetbrains.kotlin.jvm")
   apply(plugin = "maven-publish")
 
   group = "com.example"
@@ -25,11 +25,18 @@ allprojects {
     systemProperty("java.util.logging.manager", "org.jboss.logmanager.LogManager")
   }
 
+  tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_21.toString()
+    kotlinOptions.javaParameters = true
+  }
+
   val quarkusPlatformGroupId: String by project
   val quarkusPlatformArtifactId: String by project
   val quarkusPlatformVersion: String by project
   dependencies {
     implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
+    implementation("io.quarkus:quarkus-kotlin")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
   }
 
 }

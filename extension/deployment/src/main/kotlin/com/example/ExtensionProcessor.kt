@@ -1,23 +1,23 @@
-package com.example;
+package com.example
 
-import io.quarkus.arc.deployment.AdditionalBeanBuildItem;
-import io.quarkus.deployment.annotations.BuildStep;
-import io.quarkus.deployment.builditem.FeatureBuildItem;
+import io.quarkus.arc.deployment.AdditionalBeanBuildItem
+import io.quarkus.deployment.annotations.BuildStep
+import io.quarkus.deployment.builditem.FeatureBuildItem
 
-public class ExtensionProcessor {
+class ExtensionProcessor {
+  @BuildStep
+  fun feature(): FeatureBuildItem {
+    return FeatureBuildItem(FEATURE)
+  }
 
-    private static final String FEATURE = "example-extension";
+  @BuildStep
+  fun registerBeans(): AdditionalBeanBuildItem {
+    return AdditionalBeanBuildItem.builder()
+      .addBeanClass(ExampleService::class.java)
+      .build()
+  }
 
-    @BuildStep
-    FeatureBuildItem feature() {
-        return new FeatureBuildItem(FEATURE);
-    }
-
-    @BuildStep
-    AdditionalBeanBuildItem registerBeans() {
-        return AdditionalBeanBuildItem.builder()
-                .addBeanClass(ExampleService.class)
-                .build();
-    }
-
+  companion object {
+    private const val FEATURE = "example-extension"
+  }
 }

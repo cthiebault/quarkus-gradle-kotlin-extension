@@ -1,15 +1,5 @@
-package com.example.application;
+package com.example.application
 
-public class Response {
-
-    private String message;
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
+class Response {
+  var message: String? = null
 }
