@@ -1,3 +1,7 @@
+plugins {
+  id("io.quarkus")
+}
+
 dependencies {
   implementation(project(":extension:runtime"))
   implementation("io.quarkus:quarkus-resteasy-jsonb")

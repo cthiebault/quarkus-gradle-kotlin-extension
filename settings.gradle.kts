@@ -12,7 +12,7 @@ pluginManagement {
     id("io.quarkus.extension") version quarkusPlatformVersion
   }
 }
-rootProject.name = "extension-example-parent"
+rootProject.name = "gradle-kotlin-extension"
 include(
   "example-application",
   ":extension:deployment",
