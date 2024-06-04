@@ -37,3 +37,28 @@ release.properties
 # Helm
 *.lock
 *.tgz
+
+# Gradle
+.gradle/
+build/
+
+# Eclipse
+
+# IntelliJ
+
+# NetBeans
+
+# Visual Studio Code
+.factorypath
+
+# OSX
+
+# Vim
+
+# patch
+
+# Local environment
+.env
+
+# Plugin directory
+/.quarkus/cli/plugins/
