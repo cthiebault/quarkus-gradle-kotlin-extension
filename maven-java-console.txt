@@ -1,0 +1,144 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Quarkus Extension using Gradle and Kotlin                          [pom]
+[INFO] Extension - Parent                                                 [pom]
+[INFO] Extension - Runtime                                                [jar]
+[INFO] Extension - Deployment                                             [jar]
+[INFO] Example Application                                                [jar]
+[INFO] 
+[INFO] ----------------< com.example:gradle-kotlin-extension >-----------------
+[INFO] Building Quarkus Extension using Gradle and Kotlin 1.0.0-SNAPSHOT  [1/5]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ gradle-kotlin-extension ---
+[INFO] Deleting /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/target
+[INFO] 
+[INFO] --------------------< com.example:extension-parent >--------------------
+[INFO] Building Extension - Parent 1.0.0-SNAPSHOT                         [2/5]
+[INFO]   from extension/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ extension-parent ---
+[INFO] 
+[INFO] -----------------------< com.example:extension >------------------------
+[INFO] Building Extension - Runtime 1.0.0-SNAPSHOT                        [3/5]
+[INFO]   from extension/runtime/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ extension ---
+[INFO] Deleting /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/extension/runtime/target
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ extension ---
+[INFO] skip non existing resourceDirectory /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/extension/runtime/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ extension ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 1 source file with javac [debug release 11] to target/classes
+[INFO] 
+[INFO] --- quarkus-extension:3.11.0:extension-descriptor (default) @ extension ---
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ extension ---
+[INFO] skip non existing resourceDirectory /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/extension/runtime/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ extension ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ extension ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ extension ---
+[INFO] Building jar: /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/extension/runtime/target/extension-1.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] ------------------< com.example:extension-deployment >------------------
+[INFO] Building Extension - Deployment 1.0.0-SNAPSHOT                     [4/5]
+[INFO]   from extension/deployment/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ extension-deployment ---
+[INFO] Deleting /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/extension/deployment/target
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ extension-deployment ---
+[INFO] skip non existing resourceDirectory /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/extension/deployment/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ extension-deployment ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 11] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ extension-deployment ---
+[INFO] skip non existing resourceDirectory /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/extension/deployment/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ extension-deployment ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ extension-deployment ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ extension-deployment ---
+[INFO] Building jar: /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/extension/deployment/target/extension-deployment-1.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] ------------------< com.example:example-application >-------------------
+[INFO] Building Example Application 1.0.0-SNAPSHOT                        [5/5]
+[INFO]   from example-application/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ example-application ---
+[INFO] Deleting /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/example-application/target
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ example-application ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ example-application ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 2 source files with javac [debug release 11] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ example-application ---
+[INFO] skip non existing resourceDirectory /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/example-application/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ example-application ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 11] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ example-application ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.application.ExampleResourceTest
+2024-06-04 14:03:08,413 INFO  [io.quarkus] (main) example-application 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.11.0) started in 1.894s. Listening on: http://localhost:8081
+2024-06-04 14:03:08,416 INFO  [io.quarkus] (main) Profile test activated. 
+2024-06-04 14:03:08,416 INFO  [io.quarkus] (main) Installed features: [cdi, example-extension, resteasy, resteasy-jsonb, smallrye-context-propagation, vertx]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.228 s - in com.example.application.ExampleResourceTest
+2024-06-04 14:03:09,608 INFO  [io.quarkus] (main) example-application stopped in 0.035s
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ example-application ---
+[INFO] Building jar: /home/cthiebault/projects/quarkus-extensions/gradle-kotlin-extension/example-application/target/example-application-1.0.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Quarkus Extension using Gradle and Kotlin 1.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Quarkus Extension using Gradle and Kotlin .......... SUCCESS [  0.091 s]
+[INFO] Extension - Parent ................................. SUCCESS [  0.002 s]
+[INFO] Extension - Runtime ................................ SUCCESS [  1.822 s]
+[INFO] Extension - Deployment ............................. SUCCESS [  0.266 s]
+[INFO] Example Application ................................ SUCCESS [  6.446 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.767 s
+[INFO] Finished at: 2024-06-04T14:03:09+02:00
+[INFO] ------------------------------------------------------------------------

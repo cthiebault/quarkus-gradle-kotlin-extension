@@ -1,0 +1,73 @@
+:compileJava NO-SOURCE
+:processResources NO-SOURCE
+:classes UP-TO-DATE
+:jar UP-TO-DATE
+:assemble UP-TO-DATE
+:compileTestJava NO-SOURCE
+:processTestResources NO-SOURCE
+:testClasses UP-TO-DATE
+:test NO-SOURCE
+:check UP-TO-DATE
+:build UP-TO-DATE
+:example-application:processResources UP-TO-DATE
+:extension:runtime:processResources NO-SOURCE
+:extension:runtime:validateExtension
+:extension:runtime:extensionDescriptor
+:extension:runtime:compileJava UP-TO-DATE
+:extension:deployment:compileJava UP-TO-DATE
+:extension:deployment:processResources NO-SOURCE
+:extension:deployment:classes UP-TO-DATE
+:extension:deployment:jar UP-TO-DATE
+:extension:runtime:classes UP-TO-DATE
+:extension:runtime:jar
+:example-application:quarkusGenerateCode
+:example-application:quarkusGenerateCodeDev
+:example-application:compileJava UP-TO-DATE
+:example-application:classes UP-TO-DATE
+:example-application:jar UP-TO-DATE
+:example-application:compileQuarkusTestGeneratedSourcesJava NO-SOURCE
+:example-application:quarkusGenerateCodeTests
+:example-application:compileTestJava UP-TO-DATE
+:example-application:processTestResources NO-SOURCE
+:example-application:testClasses UP-TO-DATE
+:example-application:test
+:example-application:quarkusAppPartsBuild
+:example-application:quarkusDependenciesBuild
+:example-application:quarkusBuild
+:example-application:assemble
+:example-application:check
+:example-application:build
+:extension:compileJava NO-SOURCE
+:extension:processResources NO-SOURCE
+:extension:classes UP-TO-DATE
+:extension:jar UP-TO-DATE
+:extension:assemble UP-TO-DATE
+:extension:compileTestJava NO-SOURCE
+:extension:processTestResources NO-SOURCE
+:extension:testClasses UP-TO-DATE
+:extension:test NO-SOURCE
+:extension:check UP-TO-DATE
+:extension:build UP-TO-DATE
+:extension:deployment:assemble UP-TO-DATE
+:extension:deployment:compileTestJava NO-SOURCE
+:extension:deployment:processTestResources NO-SOURCE
+:extension:deployment:testClasses UP-TO-DATE
+:extension:deployment:test NO-SOURCE
+:extension:deployment:check UP-TO-DATE
+:extension:deployment:build UP-TO-DATE
+:extension:runtime:assemble
+:extension:runtime:compileTestJava NO-SOURCE
+:extension:runtime:processTestResources NO-SOURCE
+:extension:runtime:testClasses UP-TO-DATE
+:extension:runtime:test NO-SOURCE
+:extension:runtime:check UP-TO-DATE
+:extension:runtime:build
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.6/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 11s
+19 actionable tasks: 10 executed, 9 up-to-date

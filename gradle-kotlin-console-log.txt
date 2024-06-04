@@ -1,0 +1,119 @@
+:checkKotlinGradlePluginConfigurationErrors
+:compileKotlin NO-SOURCE
+:compileJava NO-SOURCE
+:processResources NO-SOURCE
+:classes UP-TO-DATE
+:jar UP-TO-DATE
+:assemble UP-TO-DATE
+:compileTestKotlin NO-SOURCE
+:compileTestJava NO-SOURCE
+:processTestResources NO-SOURCE
+:testClasses UP-TO-DATE
+:test NO-SOURCE
+:check UP-TO-DATE
+:build UP-TO-DATE
+:example-application:processResources UP-TO-DATE
+:extension:deployment:checkKotlinGradlePluginConfigurationErrors
+:extension:runtime:checkKotlinGradlePluginConfigurationErrors
+:extension:runtime:compileKotlin
+:extension:runtime:processResources NO-SOURCE
+:extension:runtime:validateExtension
+:extension:runtime:extensionDescriptor
+:extension:deployment:processResources NO-SOURCE
+:example-application:checkKotlinGradlePluginConfigurationErrors
+:example-application:compileQuarkus-test-generated-sourcesKotlin NO-SOURCE
+:example-application:compileQuarkusTestGeneratedSourcesJava NO-SOURCE
+:example-application:processTestResources NO-SOURCE
+:extension:checkKotlinGradlePluginConfigurationErrors
+:extension:compileKotlin NO-SOURCE
+:extension:compileJava NO-SOURCE
+:extension:processResources NO-SOURCE
+:extension:classes UP-TO-DATE
+:extension:jar UP-TO-DATE
+:extension:assemble UP-TO-DATE
+:extension:compileTestKotlin NO-SOURCE
+:extension:compileTestJava NO-SOURCE
+:extension:processTestResources NO-SOURCE
+:extension:testClasses UP-TO-DATE
+:extension:test NO-SOURCE
+:extension:check UP-TO-DATE
+:extension:build UP-TO-DATE
+:extension:deployment:processTestResources NO-SOURCE
+:extension:runtime:processTestResources NO-SOURCE
+:extension:runtime:compileJava
+:extension:runtime:classes
+:extension:runtime:jar
+:extension:deployment:compileKotlin
+:extension:runtime:assemble
+:extension:runtime:compileTestKotlin NO-SOURCE
+:extension:runtime:compileTestJava NO-SOURCE
+:extension:runtime:testClasses UP-TO-DATE
+:extension:runtime:test NO-SOURCE
+:extension:runtime:check UP-TO-DATE
+:extension:runtime:build
+:extension:deployment:compileJava
+:extension:deployment:classes
+:extension:deployment:jar
+:example-application:quarkusGenerateCode
+:example-application:quarkusGenerateCodeDev
+:example-application:compileKotlin
+:example-application:quarkusGenerateCodeTests
+:extension:deployment:assemble
+:extension:deployment:compileTestKotlin NO-SOURCE
+:extension:deployment:compileTestJava NO-SOURCE
+:extension:deployment:testClasses UP-TO-DATE
+:extension:deployment:test NO-SOURCE
+:extension:deployment:check UP-TO-DATE
+:extension:deployment:build
+:example-application:compileJava
+:example-application:classes
+:example-application:jar
+:example-application:compileTestKotlin
+:example-application:quarkusAppPartsBuild FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':example-application:quarkusAppPartsBuild'.
+> There was a failure while executing work items
+   > A failure occurred while executing io.quarkus.gradle.tasks.worker.BuildWorker
+      > io.quarkus.builder.BuildException: Build failure: Build failed due to errors
+        	[error]: Build step io.quarkus.arc.deployment.ArcProcessor#validate threw an exception: jakarta.enterprise.inject.spi.DeploymentException: jakarta.enterprise.inject.UnsatisfiedResolutionException: Unsatisfied dependency for type com.example.ExampleService and qualifiers [@Default]
+        	- injection target: parameter 'exampleService' of com.example.application.ExampleResource constructor
+        	- declared on CLASS bean [types=[com.example.application.ExampleResource, java.lang.Object], qualifiers=[@Default, @Any], target=com.example.application.ExampleResource]
+        	at io.quarkus.arc.processor.BeanDeployment.processErrors(BeanDeployment.java:1529)
+        	at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:332)
+        	at io.quarkus.arc.processor.BeanProcessor.initialize(BeanProcessor.java:166)
+        	at io.quarkus.arc.deployment.ArcProcessor.validate(ArcProcessor.java:488)
+        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+        	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+        	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+        	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+        	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+        	at org.jboss.threads.EnhancedQueueExecutor$Task.doRunWith(EnhancedQueueExecutor.java:2516)
+        	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2495)
+        	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1521)
+        	at java.base/java.lang.Thread.run(Thread.java:1583)
+        	at org.jboss.threads.JBossThread.run(JBossThread.java:483)
+        Caused by: jakarta.enterprise.inject.UnsatisfiedResolutionException: Unsatisfied dependency for type com.example.ExampleService and qualifiers [@Default]
+        	- injection target: parameter 'exampleService' of com.example.application.ExampleResource constructor
+        	- declared on CLASS bean [types=[com.example.application.ExampleResource, java.lang.Object], qualifiers=[@Default, @Any], target=com.example.application.ExampleResource]
+        	at io.quarkus.arc.processor.Beans.resolveInjectionPoint(Beans.java:519)
+        	at io.quarkus.arc.processor.BeanInfo.init(BeanInfo.java:642)
+        	at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:317)
+        	... 12 more
+
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.6/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 22s
+24 actionable tasks: 21 executed, 3 up-to-date
